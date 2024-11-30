@@ -2385,6 +2385,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+base-64@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/base-64/-/base-64-0.1.0.tgz#780a99c84e7d600260361511c4877613bf24f6bb"
+  integrity sha512-Y5gU45svrR5tI2Vt/X9GPd3L0HNIKzGu202EjxrXMpuc2V2CiKgemAbUUsqYmZJvPtCXoUKjNZwBJzsNScUbXA==
+
 base64-js@^1.3.1, base64-js@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
@@ -3719,6 +3724,11 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
+
+hyochan-welcome@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hyochan-welcome/-/hyochan-welcome-1.0.1.tgz#a949de8bc3c1e18fe096016bc273aa191c844971"
+  integrity sha512-WRZNH5grESkOXP/r7xc7TMhO9cUqxaJIuZcQDAjzHWs6viGP+sWtVbiBigxc9YVRrw3hnkESQWwzqg+oOga65A==
 
 ieee754@^1.1.13:
   version "1.2.1"
@@ -5489,6 +5499,26 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-audio-recorder-player@^3.6.12:
+  version "3.6.12"
+  resolved "https://registry.yarnpkg.com/react-native-audio-recorder-player/-/react-native-audio-recorder-player-3.6.12.tgz#edc3aa271534a4ce6bc4b32ff2b0ece555b35498"
+  integrity sha512-/pnZxPA2jvQ9K7oDtrjcAjc/hn124swi451Q/i1Z6yesDVqupE38moNm12HgY1IVupdUCjeiZVqPoShcE0N8mw==
+  dependencies:
+    hyochan-welcome "^1.0.0"
+
+react-native-fs@^2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/react-native-fs/-/react-native-fs-2.20.0.tgz#05a9362b473bfc0910772c0acbb73a78dbc810f6"
+  integrity sha512-VkTBzs7fIDUiy/XajOSNk0XazFE9l+QlMAce7lGuebZcag5CnjszB+u4BdqzwaQOdcYb5wsJIsqq4kxInIRpJQ==
+  dependencies:
+    base-64 "^0.1.0"
+    utf8 "^3.0.0"
+
+react-native-permissions@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-5.2.1.tgz#b028b7bc60d813588d8d3f2b80f19d1f67ba907f"
+  integrity sha512-F8CaDVi+zYjl2pO4Fwh5n5SCi5s0TvvRzQnczb8nwkzHJTv6HqlO6Sj1ZmqrAeuCN06b5Ysu9BEWhK4qT4ekXg==
+
 react-native-webview@^13.12.4:
   version "13.12.4"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-13.12.4.tgz#1a563a7fbd6bf53d688388d46708f273ed0ebb94"
@@ -6394,6 +6424,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+utf8@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/utf8/-/utf8-3.0.0.tgz#f052eed1364d696e769ef058b183df88c87f69d1"
+  integrity sha512-E8VjFIQ/TyQgp+TZfS6l8yp/xWppSAHzidGiRrqe4bK4XP9pTRyKFgGJpO3SN7zdX4DeomTrwaseCHovfpFcqQ==
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
