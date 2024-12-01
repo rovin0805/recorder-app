@@ -1,26 +1,16 @@
-import React, {useRef} from 'react';
-import {PermissionsAndroid, Platform, SafeAreaView} from 'react-native';
-import WebView, {WebViewMessageEvent} from 'react-native-webview';
+import {useRef} from 'react';
+import {PermissionsAndroid, Platform} from 'react-native';
 import AudioRecorderPlayer, {
   AVEncodingOption,
   OutputFormatAndroidType,
 } from 'react-native-audio-recorder-player';
 import RNFS from 'react-native-fs';
+import {MsgType} from '../types';
 
-type MsgType =
-  | 'startRecording'
-  | 'pauseRecording'
-  | 'resumeRecording'
-  | 'stopRecording';
-
-function App(): React.JSX.Element {
-  const webViewRef = useRef<WebView | null>(null);
+const useAudioRecorder = (
+  sendMsgToWeb: (type: MsgType, data?: any) => void,
+) => {
   const audioRecorderRef = useRef(new AudioRecorderPlayer());
-
-  const sendMsgToWeb = (type: MsgType, data?: any) => {
-    const message = JSON.stringify({type, data});
-    webViewRef?.current?.postMessage(message);
-  };
 
   const requestAosPermission = async () => {
     if (Platform.OS === 'android') {
@@ -103,44 +93,7 @@ function App(): React.JSX.Element {
     }
   };
 
-  const handleOnMessageFromWeb = ({nativeEvent}: WebViewMessageEvent) => {
-    const {type, data} = JSON.parse(nativeEvent.data);
-    console.log('🚀 ~ handleOnMessageFromWeb:', type, data);
+  return {startRecording, stopRecording, pauseRecording, resumeRecording};
+};
 
-    switch (type as MsgType) {
-      case 'startRecording':
-        startRecording();
-        break;
-      case 'pauseRecording':
-        pauseRecording();
-        break;
-      case 'resumeRecording':
-        resumeRecording();
-        break;
-      case 'stopRecording':
-        stopRecording();
-        break;
-      default:
-        break;
-    }
-  };
-
-  return (
-    <SafeAreaView style={{flex: 1}}>
-      <WebView
-        ref={webViewRef}
-        source={{
-          uri:
-            Platform.OS === 'android'
-              ? 'http://10.0.2.2:3000'
-              : 'http://localhost:3000',
-        }}
-        // web에서 받은 메세지 처리
-        onMessage={handleOnMessageFromWeb}
-        webviewDebuggingEnabled
-      />
-    </SafeAreaView>
-  );
-}
-
-export default App;
+export default useAudioRecorder;
