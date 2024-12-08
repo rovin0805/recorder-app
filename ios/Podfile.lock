@@ -1122,6 +1122,12 @@ PODS:
   - RNPermissions (5.2.1):
     - React-Core
   - SocketRocket (0.6.1)
+  - VisionCamera (4.6.3):
+    - VisionCamera/Core (= 4.6.3)
+    - VisionCamera/React (= 4.6.3)
+  - VisionCamera/Core (4.6.3)
+  - VisionCamera/React (4.6.3):
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -1201,6 +1207,7 @@ DEPENDENCIES:
   - RNAudioRecorderPlayer (from `../node_modules/react-native-audio-recorder-player`)
   - RNFS (from `../node_modules/react-native-fs`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
+  - VisionCamera (from `../node_modules/react-native-vision-camera`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1323,6 +1330,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-fs"
   RNPermissions:
     :path: "../node_modules/react-native-permissions"
+  VisionCamera:
+    :path: "../node_modules/react-native-vision-camera"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1391,6 +1400,7 @@ SPEC CHECKSUMS:
   RNFS: 4ac0f0ea233904cb798630b3c077808c06931688
   RNPermissions: e13041735d8b93f87800e9bf3f4cf99d3d3c9877
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
+  VisionCamera: 598ab83c6bf4d65f5c32ec54361eed866505d388
   Yoga: 805bf71192903b20fc14babe48080582fee65a80
 
 PODFILE CHECKSUM: 80b7977d65346e021307f0a4f65a45e8dc9dad04

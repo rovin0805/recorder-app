@@ -2,4 +2,6 @@ export type MsgType =
   | 'startRecording'
   | 'pauseRecording'
   | 'resumeRecording'
-  | 'stopRecording';
+  | 'stopRecording'
+  | 'openCamera'
+  | 'takePhoto';

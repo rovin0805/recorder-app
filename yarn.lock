@@ -5519,6 +5519,11 @@ react-native-permissions@^5.2.1:
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-5.2.1.tgz#b028b7bc60d813588d8d3f2b80f19d1f67ba907f"
   integrity sha512-F8CaDVi+zYjl2pO4Fwh5n5SCi5s0TvvRzQnczb8nwkzHJTv6HqlO6Sj1ZmqrAeuCN06b5Ysu9BEWhK4qT4ekXg==
 
+react-native-vision-camera@^4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/react-native-vision-camera/-/react-native-vision-camera-4.6.3.tgz#4454ec5a00d529dde6e4d96e29cdb49fc37a3b7f"
+  integrity sha512-fVHww4cNFrxvMYOlUZcjl3iYmR3vcUtvLZKW9NHlKZ3o4zsspwYjbw2vheZvHrHtJ30OrE3N2NFqT6CxgPvRCw==
+
 react-native-webview@^13.12.4:
   version "13.12.4"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-13.12.4.tgz#1a563a7fbd6bf53d688388d46708f273ed0ebb94"
