@@ -5,11 +5,9 @@ import AudioRecorderPlayer, {
   OutputFormatAndroidType,
 } from 'react-native-audio-recorder-player';
 import RNFS from 'react-native-fs';
-import {MsgType} from '../types';
+import {sendMsgToWeb} from '../types';
 
-const useAudioRecorder = (
-  sendMsgToWeb: (type: MsgType, data?: any) => void,
-) => {
+const useAudioRecorder = (sendMsgToWeb: sendMsgToWeb) => {
   const audioRecorderRef = useRef(new AudioRecorderPlayer());
 
   const requestAosPermission = async () => {

@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import {
+  LogBox,
   Platform,
   SafeAreaView,
   StyleSheet,
@@ -12,6 +13,9 @@ import {Camera} from 'react-native-vision-camera';
 import {MsgType} from './types';
 import useAudioRecorder from './hooks/useAudioRecorder';
 import useCamera from './hooks/useCamera';
+import useStorage from './hooks/useStorage';
+
+LogBox.ignoreLogs(['rn-recordback']);
 
 function App(): React.JSX.Element {
   const webViewRef = useRef<WebView | null>(null);
@@ -23,9 +27,9 @@ function App(): React.JSX.Element {
 
   const {startRecording, pauseRecording, resumeRecording, stopRecording} =
     useAudioRecorder(sendMsgToWeb);
-
   const {cameraRef, device, isCameraOpen, openCamera, closeCamera, takePhoto} =
     useCamera(sendMsgToWeb);
+  const {loadDatabase, saveDatabase} = useStorage(sendMsgToWeb);
 
   const handleOnMessageFromWeb = ({nativeEvent}: WebViewMessageEvent) => {
     const {type, data} = JSON.parse(nativeEvent.data);
@@ -46,6 +50,12 @@ function App(): React.JSX.Element {
         break;
       case 'openCamera':
         openCamera();
+        break;
+      case 'loadDatabase':
+        loadDatabase();
+        break;
+      case 'saveDatabase':
+        saveDatabase(data);
         break;
       default:
         break;

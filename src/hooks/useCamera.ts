@@ -1,9 +1,9 @@
 import {useRef, useState} from 'react';
 import {Camera, useCameraDevice} from 'react-native-vision-camera';
 import RNFS from 'react-native-fs';
-import {MsgType} from '../types';
+import {sendMsgToWeb} from '../types';
 
-const useCamera = (sendMsgToWeb: (type: MsgType, data?: any) => void) => {
+const useCamera = (sendMsgToWeb: sendMsgToWeb) => {
   const cameraRef = useRef<Camera | null>(null);
   const device = useCameraDevice('back');
   const [isCameraOpen, setIsCameraOpen] = useState(false);
